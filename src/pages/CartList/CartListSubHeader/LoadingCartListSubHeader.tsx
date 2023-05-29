@@ -1,3 +1,4 @@
+import PageTitle from '@Components/Header/PageTitle';
 import { Suspense } from 'react';
 
 import * as S from './style';
@@ -8,7 +9,7 @@ import LoadingCartListController from '../CartListController/LoadingCartListCont
 function LoadingCartListSubHeader() {
   return (
     <>
-      <S.Title>장바구니</S.Title>
+      <PageTitle title="장바구니" />
       <S.CartListSubHeader>
         <Suspense fallback={<CartAmount isLoading />}>
           <CartAmount />

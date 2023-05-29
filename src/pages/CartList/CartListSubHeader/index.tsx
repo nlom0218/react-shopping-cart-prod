@@ -1,3 +1,4 @@
+import PageTitle from '@Components/Header/PageTitle';
 import { Suspense } from 'react';
 import { useRecoilValue } from 'recoil';
 
@@ -18,7 +19,7 @@ function CartListSubHeader() {
 
   return (
     <>
-      <S.Title>{server}의 장바구니</S.Title>
+      <PageTitle title={`${server}의 장바구니`} />
       <S.CartListSubHeader>
         <Suspense fallback={<CartAmount isLoading />}>
           <CartAmount />
